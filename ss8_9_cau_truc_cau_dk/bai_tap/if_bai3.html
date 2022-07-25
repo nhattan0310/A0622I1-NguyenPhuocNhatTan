@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính diện tích hình vuông khi biết cạnh a.</title>
 </head>
 <body>
-$END$
+Nhap canh a<p><input type="number" id="a">
+<input type="submit" value="Tinh Dien Tich" onclick="function_bai3()"></p>
+<p id="result">  </p>
 </body>
+<script>
+    function function_bai3(){
+        let a = parseFloat(document.getElementById('a').value);
+        let S = a**2;
+        document.getElementById('result').innerText=S;
+    }
+</script>
 </html>

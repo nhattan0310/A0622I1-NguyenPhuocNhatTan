@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</title>
 </head>
 <body>
-$END$
+<p>Nhap Canh a<input type="number" id="a"></p>
+<p>Nhap Canh b<input type="number" id="b"></p>
+<p><input type="submit" value="Tinh Dien Tich" onclick="function_bai4()"></p>
+<p id="result"></p>
 </body>
+<script>
+    function function_bai4(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let S = a*b;
+        document.getElementById('result').innerText=S;
+    }
+</script>
 </html>

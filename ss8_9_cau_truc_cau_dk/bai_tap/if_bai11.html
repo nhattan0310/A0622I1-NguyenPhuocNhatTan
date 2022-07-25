@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>Nhap Thu Nhap Vao ô Nay De Minh Tinh Thue Cho Nha
+    <input type="number" id="a">
+    <input type="submit" value="Tinh Tien" onclick="function_bai10()"></p>
+<p id="result"></p>
 </body>
+<script>
+    function function_bai10() {
+        let a = parseFloat(document.getElementById('a').value);
+        let cuoc;
+        if(a <= 500000000){
+            cuoc = a*5/100;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 5000000 && a <= 10000000){
+            cuoc = a/10;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 10000000 && a <= 18000000){
+            cuoc = a*15/100;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 18000000 && a <= 32000000){
+            cuoc = a*2/10;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 32000000 && a <= 52000000){
+            cuoc = a*25/100;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 52000000 && a <= 80000000){
+            cuoc = a*3/10;
+            document.getElementById("result").innerText= cuoc +" VND";
+        } else{
+            cuoc = a*35/100;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }
+    }
+</script>
 </html>

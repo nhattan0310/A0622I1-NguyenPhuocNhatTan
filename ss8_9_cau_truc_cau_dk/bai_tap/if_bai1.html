@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>°C  x  9/5 + 32 = °F</title>
 </head>
 <body>
-$END$
+Do C = <input type="number" id="DoC" >
+<input type="submit" value="Quy Doi" id="thucthi" onclick="function_bai1()"/>
+<p>Do F = <span id="doidof"></span></p>
+
 </body>
+<script>
+    function function_bai1() {
+        let DoC = parseFloat(document.getElementById("DoC").value);
+        let DoF = (9*DoC)/5+32;
+        document.getElementById("doidof" ).innerHTML=DoF;
+    }
+</script>
 </html>

@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <p>Nhap Chieu Cao<input type="number"  id="chieucao">
+        Nhap Can Nang<input type="number"  id="cannang">
+      <input type="submit" value="Tinh BMI" id="tinhchiso" onclick="function_bai1()"><br>
+             <p>BMI =<span id="bmi"></span></p>
+            <p>Interpretation =<span id="int"></span></p>
 </body>
+<script>
+    function function_bai1(){
+        let chieucao=parseFloat(document.getElementById("chieucao").value);
+        let cannang=parseFloat(document.getElementById("cannang").value);
+        let BMI= cannang/(chieucao**2);
+        BMI=BMI.toFixed(2);
+        document.getElementById("bmi").innerHTML=BMI;
+        let result;
+        if(BMI<18.5){
+            result ='Underweight';
+        }else if(18.5 <= BMI && BMI <25){
+            result ='Normal';
+        }else if (25 <= BMI && BMI <30){
+            result ='Overweight';
+        }else{
+            result='Obese';
+        }
+        document.getElementById("int").innerHTML=result;
+    }
+
+</script>
 </html>

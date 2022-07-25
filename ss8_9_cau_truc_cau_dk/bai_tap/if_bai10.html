@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>Nhap So kWh Su Dung
+    <input type="number" id="a">
+    <input type="submit" value="Tinh Tien" onclick="function_bai10()"></p>
+<p id="result"></p>
 </body>
+<script>
+    function function_bai10() {
+        let a = parseFloat(document.getElementById('a').value);
+        let cuoc;
+        if(a <= 50){
+            cuoc = 1678*a;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 50 && a <= 100){
+            cuoc = 1678*50 + 1734*(a-50);
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a > 100 && a <= 200){
+            cuoc = 1678*50 + 1734*50 + 2014*(a-100);
+            document.getElementById("result").innerText= cuoc +" VND";
+        } else{
+            cuoc = 1678*50 + 1734*50 + 2014*100 + 2536*(a-200);
+            document.getElementById("result").innerText= cuoc +" VND";
+        }
+    }
+</script>
 </html>

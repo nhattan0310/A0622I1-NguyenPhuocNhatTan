@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<p>Nhap  a<input type="number" id="a"></p>
+<p>Nhap  b<input type="number" id="b"></p>
+<p><input type="submit" value="Giai Phuong Trinh Bac 1" onclick="function_bai6()"></p>
+<p id="result"></p>
 </body>
+<script>
+    function function_bai6(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let x;
+        if (a == 0 && b == 0){
+            document.getElementById('result').innerText='Vo So Nghiem'
+        }else if (a != 0){
+            document.getElementById('result').innerText='Vo Nghiem'
+        }else {
+            let x = -b/a
+            document.getElementById('result').innerText= x;
+        }
+    }
+</script>
 </html>

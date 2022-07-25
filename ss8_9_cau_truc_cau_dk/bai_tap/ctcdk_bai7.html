@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        600 đồng cho mỗi gọi của 50 phút đầu tiên.
+        400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+        200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+    </title>
+</head>
+<body>
+<p>Nhap So Phut Su Dung
+    <input type="number" id="a">
+<input type="submit" value="Tinh Cuoc" onclick="function_bai7()"></p>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai7() {
+        let a = parseFloat(document.getElementById('a').value);
+        let cuoc;
+        if(a < 50){
+            cuoc = 600*a;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else if(a >= 50 && a <= 200){
+            cuoc = 600*50 + 400*(a-49);
+            document.getElementById("result").innerText= cuoc +" VND";
+        }else{
+            cuoc = 600*50 + 400*150 + 200*(a-149) ;
+            document.getElementById("result").innerText= cuoc +" VND";
+        }
+    }
+</script>
+</html>

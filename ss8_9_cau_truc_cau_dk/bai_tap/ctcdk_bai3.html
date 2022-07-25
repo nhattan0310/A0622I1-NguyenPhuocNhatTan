@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhap So Nguyen<input type="number" id="songuyen">
+        <input type="submit" value="Kiem Tra" id="tinhtoan" onclick="function_bai3()"></p><br>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai3(){
+        let songuyen = parseInt(document.getElementById("songuyen").value);
+        if(songuyen > 0){
+            document.getElementById("result").innerText="Lon Hon 0";
+            }else if (songuyen < 0){
+            document.getElementById("result").innerText="Nho Hon 0";
+        }else {
+            document.getElementById("result").innerText ="Bang 0";
+        }
+    }
+</script>
+</html>

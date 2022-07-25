@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap Tuoi<input type="number" id="tuoi">
+<input type="submit" value="Kiem Tra" id="tinhtoan" onclick="function_bai2()"></p>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai2() {
+        let tuoi = parseInt(document.getElementById("tuoi").value);
+        if(tuoi >= 15){
+            document.getElementById("result").innerText="Du Dieu Kien";
+        }else{
+            document.getElementById("result").innerText="Khong Du Dieu Kien";
+        }
+    }
+</script>
+</html>

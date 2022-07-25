@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<p>Nhap  a<input type="number" id="a"></p>
+<p>Nhap  b<input type="number" id="b"></p>
+<p>Nhap  c<input type="number" id="c"></p>
+<p><input type="submit" value="Giai Phuong Trinh Bac 2" onclick="function_bai7()"></p>
+<p id="result"></p>
 </body>
+<script>
+    function function_bai7(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        let delta = b*b - 4*a*c;
+        let x = -b/2*a;
+        let y = -b+Math.sqrt(delta)/2*a;
+        let z = -b-Math.sqrt(delta)/2*a;
+        if (delta < 0 ){
+            document.getElementById('result').innerText='Vo Nghiem';
+        }else if (delta == 0){
+            document.getElementById('result').innerText='2 Nghiem Kep x1=x2= '+x;
+        }else {
+            document.getElementById('result').innerText="Phuong Trinh Co 2 Nghiem Phan Biet x1= " +y+'x2 ='+z;
+        }
+    }
+</script>
 </html>

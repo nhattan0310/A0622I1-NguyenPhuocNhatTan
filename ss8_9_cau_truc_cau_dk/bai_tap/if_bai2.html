@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>ft =m * 3.2808</title>
 </head>
 <body>
-$END$
+Nhap met<p><input type="number" id="m">
+<input type="submit" value="Quy Doi" onclick="function_bai2()"></p>
+<p id="ft"></p>
 </body>
+<script>
+    function function_bai2(){
+        let m =parseFloat(document.getElementById('m').value);
+        let ft= m*3.2808 ;
+        alert(ft);
+    }
+</script>
 </html>

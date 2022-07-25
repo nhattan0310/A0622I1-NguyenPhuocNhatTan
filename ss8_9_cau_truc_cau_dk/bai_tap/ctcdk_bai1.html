@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap a<input type="number" id="a">Nhap b<input type="number" id="b">
+<input type="submit" value="Kiem Tra" id="tinh" onclick="function_bai1()"><br>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai1() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        if (a % b == 0) {
+            document.getElementById("result").innerText = "a chia het cho b";
+        } else {
+            document.getElementById("result").innerText = "a khong chia het cho b";
+        }
+    }
+
+</script>
+</html>

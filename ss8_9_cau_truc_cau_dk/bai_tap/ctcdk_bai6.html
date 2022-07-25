@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu. 10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.</title>
+</head>
+<body>
+<p>Nhap Doanh Thu<input type="number" id="dt">
+<input type="submit" value="Tinh Hoa Hong" onclick="function_bai6()"></p>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai6() {
+        let dt = parseFloat(document.getElementById('dt').value);
+        let hoahong;
+        if (dt >50000000 && dt <= 100000000) {
+            hoahong = dt * 5 / 100;
+            document.getElementById('result').innerText = 'Hoa Hong = ' + hoahong;
+        }else if (dt >100000000 && dt <= 300000000) {
+            hoahong = dt * 10 / 100;
+            document.getElementById('result').innerText = 'Hoa Hong = ' + hoahong;
+        }else if (dt > 300000000){
+            document.getElementById('result').innerText = 'Bot Ao Tuong';
+        }else {
+            document.getElementById('result').innerText = 'Lo Chay KPI Di';
+        }
+    }
+</script>
+</html>

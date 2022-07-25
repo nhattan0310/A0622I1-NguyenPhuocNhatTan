@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2><b>Tín Dụng Đen </b></h2>
+<p>Nhap Tien Vay
+    <input type="number" id="a"><br>
+    Nhap Thang Vay <input type="number" id="b">
+    <input type="submit" value="Tinh Tien" onclick="function_bai12()"></p>
+Lãi Cắt Cổ =<p id="result"></p>
 </body>
+<script>
+    function function_bai12() {
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let thue;
+        if(b==1){
+            thue = a*1/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==2){
+            thue = a*2/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==3){
+            thue = a*3/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==4){
+            thue = a*4/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==5){
+            thue = a*5/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==6){
+            thue = a*6/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==7){
+            thue = a*7/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==8){
+            thue = a*8/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==9){
+            thue = a*9/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==10){
+            thue = a*10/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==11){
+            thue = a*11/100;
+            document.getElementById("result").innerText= thue +" VND";
+        }else if(b==12){
+            thue = a*12/100;
+            document.getElementById("result").innerText= thue +" VND";
+        } else{
+            document.getElementById("result").innerText= "Lâu Quá Không Cho Vay";
+        }
+    }
+</script>
 </html>

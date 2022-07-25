@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<p>Nhap Diem Kiem Tra<input type="number" id="kt">
+    Nhap Diem Giua Ky<input type="number" id="gk">
+    Nhap Diem Cuoi Ky<input type="number" id="ck">
+<input type="submit" value="Kiem Tra" id="kiemtra" onclick="function_bai5()"></p>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai5(){
+        let kt = parseFloat(document.getElementById('kt').value);
+        let gk = parseFloat(document.getElementById('gk').value);
+        let ck = parseFloat(document.getElementById('ck').value);
+        if ((kt + gk * 2 + ck * 3)/6 >= 8) {
+            document.getElementById('result').innerText = 'Gioi'
+        }else if ((kt + gk * 2 + ck * 3)/6 >= 6.5 && (kt + gk * 2 + ck * 3)/6 <8){
+        document.getElementById('result').innerText = 'Kha'
+    }else if ((kt + gk * 2 + ck * 3)/6 >= 5 && (kt + gk * 2 + ck * 3)/6 <6.5) {
+        document.getElementById('result').innerText = 'Trau Bo'
+    }else  {
+        document.getElementById('result').innerText = 'Yeu'
+    }
+    }
+</script>
+</html>
