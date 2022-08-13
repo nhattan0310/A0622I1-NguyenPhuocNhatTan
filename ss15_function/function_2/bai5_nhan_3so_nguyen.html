@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập Số Nguyên 1 <input type="text" id="a"></p>
+<p>Nhập Số Nguyên 2 <input type="text" id="b"></p>
+<p>Nhập Số Nguyên 3 <input type="text" id="c">
+    <input type="submit" value="Gét Gô" onclick="GTNN()"></p>
+Số Nguyên Nhỏ Nhất Là : <p id="result"></p>
+</body>
+<script>
+    function GTNN() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        let min = a;
+        if (b < min && b < c) {
+            document.getElementById('result').innerHTML = b;
+        } else if (c < min && c < b) {
+            document.getElementById('result').innerHTML = c;
+        } else
+            document.getElementById('result').innerHTML = a;
+    }
+</script>
+</html>
