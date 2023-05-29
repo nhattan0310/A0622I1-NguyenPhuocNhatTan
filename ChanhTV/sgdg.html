@@ -2,9 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    ​
+    <style>
+        /*h2{*/
+        /*    color: red;*/
+        /*    background-color: yellow;*/
+        /*}*/
+        /*.h2{*/
+        /*    color: red;*/
+        /*    background-color: yellow;*/
+        /*}*/
+    </style>
+    <link rel="stylesheet" href="mycss.css">
 </head>
 <body>
-$END$
+<h2 class="h2"> Đăng ký thông tin </h2>
+<h2 > Đăng ký thông tin </h2>
+<form action="" method="get">
+    <label>Tên</label>
+    <input type="text" name="ten" id="ten"><br>
+    <label>Tên đăng nhập</label>
+    <input type="text" name="tenDangNhap"><br>
+    <label>Mật khẩu</label>
+    <input type="password" name="matKhau"><br>
+    <label>Ngày Sinh</label>
+    <input type="date" name="ngaySinh"><br>
+    <label>Điểm</label>
+    <input type="number" name="diem"><br>
+    <label>Giới tính</label>
+    <input  type="radio" name="gioTinh" value="nam" id="gioTinh"> Nam
+    <input  type="radio" name="gioTinh" value="nu"> Nữ<br>
+    <label>Sở Thích</label>
+    <input type="checkbox" value="theThao"> Thể thao
+    <input type="checkbox" value="xemPhim"> Xem phim
+    <input type="checkbox" value="duLich"> Du lịch<br>
+    <select name="tinh">
+        <option value="DN">Đà nẵng</option>
+        <option value="HN">Hà Nội</option>
+        <option value="SG">Sài Gòn</option>
+    </select>
+    <input type="button"  onclick="change1()" value="Gửi1"><br>
+    <button type="submit"> Gửi</button>
+    <button type="reset"> reset</button>
+</form>
+<script>
+    function change1() {
+        let a = document.getElementById("ten").value;
+        alert(a);
+    }
+</script>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Chanh</td>
+        <td>38</td>
+        <td>email</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Chanh</td>
+        <td>38</td>
+        <td>email</td>
+    </tr>
+</table>
+​
+<table border="1">
+    <tr>
+        <th rowspan="2">STT</th>
+        <th rowspan="2">Môn học</th>
+        <th colspan="2">Số tiết</th>
+    </tr>
+    <tr>
+        <th>Thưc hành</th>
+        <th>Lý Thuyết</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Toán</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Lý</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+</table>
 </body>
 </html>

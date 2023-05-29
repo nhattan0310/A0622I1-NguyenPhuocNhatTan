@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maso" placeholder="Nhập Mã Sổ">
+<input type="text" id="loaitietkiem" placeholder="Nhập Loại Tiết Kiệm">
+<input type="text" id="name" placeholder="Nhập Họ Tên">
+<input type="number" id="cmnd" placeholder="Nhập Chứng Minh Thư">
+<input type="date" id="ngaymoso" placeholder="Nhập ngày">
+<input type="number" id="sotiengui" placeholder="Nhập Số Tiền Gửi">
+<input type="button" value="Save" onclick="addSoTietKiem()">
+<p id="result"></p>
+</body>
+<script>
+    class SoTietKiem {
+        constructor(maso,loaitietkiem,name,cmnd,ngaymoso,sotiengui) {
+            this.maso =maso;
+            this.loaitietkiem =loaitietkiem;
+            this.name=name;
+            this.cmnd=cmnd;
+            this.ngaymoso=ngaymoso;
+            this.sotiengui=sotiengui;
+        }
+        setmaso(maso) {
+            this.maso = maso;
+        }
+        setloaitietkiem(loaitietkiem) {
+            this.loaitietkiem = loaitietkiem;
+        }
+        setname(name) {
+            this.name = name;
+        }
+        setcmnd(cmnd) {
+            this.cmnd = cmnd;
+        }
+        setngaymoso(ngaymoso) {
+            this.ngaymoso = ngaymoso;
+        }
+        setsotiengui(sotiengui) {
+            this.sotiengui = sotiengui;
+        }
+
+        getmaso() {
+            return this.maso;
+        }
+        getloaitietkiem() {
+            return this.loaitietkiem;
+        }getname() {
+            return this.name;
+        }getcmnd() {
+            return this.cmnd;
+        }getngaymoso() {
+            return this.ngaymoso;
+        }getsotiengui() {
+            return this.sotiengui;
+        }
+    }
+    let sotietkiemList = [];
+    display(sotietkiemList);
+    function display(list) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Mã Sổ</th>\n' +
+            '        <th>Loại Tiết Kiệm</th>\n' +
+            '        <th>HỌ & Tên</th>\n' +
+            '        <th>Chứng Minh</th>\n' +
+            '        <th>Ngày MỞ Sổ</th>\n' +
+            '        <th>Số Tiền Gởi</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < sotietkiemList.length; i++) {
+            tableString += '<tr>\n' +
+                '        <th>'+sotietkiemList[i].getmaso()+'</th>\n' +
+                '        <th>'+sotietkiemList[i].getloaitietkiem()+'</th>\n' +
+                '        <th>'+sotietkiemList[i].getname()+'</th>\n' +
+                '        <th>'+sotietkiemList[i].getcmnd()+'</th>\n' +
+                '        <th>'+sotietkiemList[i].getngaymoso()+'</th>\n' +
+                '        <th>'+sotietkiemList[i].getsotiengui()+'</th>\n' +
+                '        <th><input type="button" onclick="deleteSoTietKiem('+ i +')" value="Delete"></th>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>';
+        document.getElementById('result').innerHTML = tableString;
+    }
+    function deleteSoTietKiem(index) {
+        if (confirm('Ban Co Muon Xoa  ' + sotietkiemList[index].getname())){
+            sotietkiemList.splice(index,1);
+        }else {
+            alert('Ban Da Khong Xoa');
+        }
+        display(sotietkiemList);
+    }
+    // function editSoTietKiem(index) {
+    //     let newmaso = prompt("Hãy nhập Ma So mới ");
+    //     let newloaitiekiem = prompt("Hãy nhập Loai Tiet Kiem mới ");
+    //     let newname = prompt("Hãy nhập Ten mới ");
+    //     let newcmnd = prompt("Hãy nhập cmnd mới ");
+    //     let newngaymoso = prompt("Hãy nhập Ma So mới ");
+    //     let newsotiengui = prompt("Hãy nhập So Tien Gui mới ");
+    //     studentList[index].setmaso(newmaso);
+    //     studentList[index].setloaitietkiem(newloaitiekiem);
+    //     studentList[index].setname(newname);
+    //     studentList[index].setcmnd(newcmnd);
+    //     studentList[index].setngaymoso(newngaymoso);
+    //     studentList[index].setsotiengui(newsotiengui);
+    //     display(sotietkiemList);
+    // }
+    function addSoTietKiem() {
+        let maso = document.getElementById("maso").value;
+        let loaitietkiem = document.getElementById("loaitietkiem").value;
+        let name = document.getElementById("name").value;
+        let cmnd = document.getElementById("cmnd").value;
+        let ngaymoso = document.getElementById("ngaymoso").value;
+        let sotiengui = document.getElementById("sotiengui").value;
+        let newSoTietKiem = new SoTietKiem(maso,loaitietkiem,name,cmnd,ngaymoso,sotiengui);
+        sotietkiemList.push(newSoTietKiem);
+        display(sotietkiemList);
+
+    }
+</script>
+</html>

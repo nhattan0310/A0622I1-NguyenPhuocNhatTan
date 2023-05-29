@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let arr =[];
+    alert('Nhap 10 So Ngau Nhien');
+    for (let i = 0; i <10 ; i++) {
+         arr[i] = parseInt(prompt('Nhap So Ngau Nhien'));
+    }
+    document.write(arr.sort(function(a, b){return b - a}));
+</script>
 </html>

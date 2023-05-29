@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>tu so1<input type="number" id="tuso1">
+    phan so 1<input type="number" id="phanso1"><br></p>
+<p>tu so2<input type="number" id="tuso2">
+    phan so 2<input type="number" id="phanso2"><br></p>
+<input type="submit" value="Kiem Tra" onclick="function_bai2()"></p>
+<p id="result"></p>
+</body>
+<script>
+    function function_bai2(){
+        let tuso1 = parseFloat(document.getElementById('tuso1').value);
+        let phanso1 = parseFloat(document.getElementById('phanso1').value);
+        let tuso2 = parseFloat(document.getElementById('tuso2').value);
+        let phanso2 = parseFloat(document.getElementById('phanso2').value);
+        if ((tuso1 / phanso1 )== (tuso2 /phanso2)){
+            document.getElementById("result").innerText =" Bang Nhau";
+        }else {
+            document.getElementById("result").innerText =" Khong Bang Nhau";
+        }
+    }
+</script>
+</html>

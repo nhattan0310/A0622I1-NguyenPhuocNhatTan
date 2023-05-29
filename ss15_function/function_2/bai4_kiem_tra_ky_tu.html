@@ -8,10 +8,17 @@
 
 </body>
 <script>
-    kiemtra();
+    let n = (prompt("Nhap Ky Tu"));
+
     function kiemtra() {
-        let n = parseInt(prompt("Nhap Ky Tu"));
-        
+        if (Number.isNaN(n)) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
+
+    alert(kiemtra());
 </script>
 </html>

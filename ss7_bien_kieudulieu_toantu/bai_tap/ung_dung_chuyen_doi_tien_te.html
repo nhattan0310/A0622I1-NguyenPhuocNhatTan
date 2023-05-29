@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<b>Amount</b><input type="number" id="amount">
+<b>From Currency</b><select id="fromcurrency">
+    <option value="vnd">VND</option>
+    <option value="usd">USD</option>
+    <option value="euro">Euro</option>
+</select>
+<b>To Currency</b><select id="tocurrency">
+    <option value="vnd">VND</option>
+    <option value="usd">USD</option>
+    <option value="euro">Euro</option>
+</select>
+<input type="submit" value="convert" id="quydoi" onclick="function_bai1()"/>
+<p>Result =<span id="result"></span></p>
+</body>
+<script>
+    function function_bai1() {
+        let amount=parseFloat(document.getElementById("amount").value);
+        let from=document.getElementById("fromcurrency").value;
+        let to=document.getElementById("tocurrency").value;
+        switch (from+to) {
+            case 'vndvnd':
+                var result=amount
+                alert(result)
+                break;
+            case  'vndusd':
+                var result = amount/23500
+                    alert(result)
+                break;
+            case 'vndeuro':
+                var result = amount*24000
+                alert(result)
+                break;
+            case 'usdusd':
+                var result = amount
+                alert(result)
+                break;
+            case 'usdvnd':
+                var result = amount*235000
+                alert(result)
+                break;
+            case 'usdeuro':
+                var result = amount*1.021276595744681
+                alert(result)
+                break;
+            case 'eurovnd':
+                var result = amount*24000
+                alert(result)
+                break;
+            case 'eurousd':
+                var result = amount/1.021276595744681
+                alert(result)
+                break;
+            case 'euroeuro':
+                var result = amount
+                alert(result)
+                break;
+        }
+    }
+</script>
+</html>

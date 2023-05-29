@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let space = '&nbsp&nbsp&nbsp'
+    let n = 6;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i < j) {
+                document.write(" * ")
+            } else {
+                document.write(space);
+            }
+        }document.write("<br>");
+    }
+</script>
+</html>

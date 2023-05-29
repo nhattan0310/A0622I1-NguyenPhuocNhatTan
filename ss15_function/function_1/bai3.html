@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="submit" value="Nhap Tham So" onclick="mot()">
 </body>
+<script>
+    function mot() {
+        let a =parseFloat(prompt('Nhap Tham So Thu Nhat'));
+        let b =parseFloat(prompt('Nhap Tham So Thu Hai'));
+        let sum = 0;
+        if(b >= a){
+            sum = a+b;
+            alert(sum);
+        }else {
+            alert("Nguyen Thanh Cong");
+        }
+    }
+</script>
 </html>

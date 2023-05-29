@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // dùng function
+    // let Student = function (name, age, address) {
+    //     // thuộc tính
+    //     this.name = name;
+    //     this.age = age;
+    //     this.address = address;
+    //     // hành vi
+    //     this.study = function (subject) {
+    //         //
+    //         console.log("học viên đang học môn : " + subject);
+    //     }
+    // }
+    ​
+    // khởi tạo các sinh viên
+    // let sinhVien1 = new Student("Tài", 25,"Đà nẵng");
+    // let sinhVien2 = new Student("Chánh", 38,"Đà nẵng");
+    // let sinhVien3 = new Student("Khánh", 33,"Quang Nam");
+    // console.log("tên sinh viên 1 là" +sinhVien1.name)
+    // sinhVien1.study("Lập trình OOP")
+    ​
+    ​
+    // tạo bằng class
+    class SinhVien{
+        // hàm constructor là hàm khởi tạo
+        constructor(ten,tuoi,diaChi) {
+            this.ten =ten;
+            this.tuoi=tuoi;
+            this.diaChi=diaChi;
+        }
+        // getter và setter
+        getTen(){
+            return this.ten;
+        }
+        setTen(tenMoi){
+            this.ten =tenMoi;
+        }
+        // hành vi học
+        hoc(monHoc){
+            console.log("học viên "+ this.ten+" đang học môn : " + monHoc);
+        }
+    }
+    //khởi tạo các sinh viên
+    let sinhVien5= new SinhVien("Vinh",21,"Huế");
+    sinhVien5.hoc("Toán");
+    console.log("tên sinh viên 5 " + sinhVien5.getTen())
+    sinhVien5.setTen("Chánh");
+    sinhVien5.hoc("tiếng anh");
+​
+    ​
+    ​
+    ​
+    ​
+    ​
+    ​
+</script>
+</body>
+</html>

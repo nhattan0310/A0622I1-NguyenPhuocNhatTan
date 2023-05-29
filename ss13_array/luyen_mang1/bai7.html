@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
 </body>
+<script>
+    let arr =[0,1,2,3,4,5,6,7,8,9];
+    let numberV = parseInt(prompt('nhap so nguyen'));
+    for (let i = 0; i <arr.length ; i++) {
+        if (arr[i] == numberV) {
+            arr.splice(i, 1);
+            arr.push("0")
+            document.write(arr.join(', '));
+        }else {
+            document.write('V khong thuoc mang');
+            break;
+        }
+    }
+
+</script>
 </html>

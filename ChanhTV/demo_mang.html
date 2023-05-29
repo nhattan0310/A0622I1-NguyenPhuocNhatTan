@@ -2,9 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // khai báo và khởi tạo mảng rỗng ( ko chưa pt nào)
+    let arrNumber = [];
+    // mảng số có 5 phần tử
+    let arrNumber2 = [10, 20, 30, 40, 50];
+    let arrStr = ["Ha noi", "Da nang", "Hue"];
+    let arrMix = [true, 20, "Hello"];
+    // khai báo bằng từ khóa new Array()
+    let arrayNumber = new Array();// mảng rỗng
+    let arrNumber3 = new Array(10, 20, 30, 40, 50);
+    let arrStr2 = new Array("HN", "SG", "DN");
+    arrStr2.push("Hue");
+    // sử dụng từ khóa Array
+    let arrayStr3 = Array("VN", "TQ", "CUBA");
+    // Lưu ý khi sử dụng với số:
+    let arr = [5];// mảng có 1 phần tử với giá trị là 5
+    // khai báo mảng có 5 phần tử, và chưa chứa giá trị
+    let arr2 = new Array(5);
+    // khai báo 1 mảng có 1 phần tử với gí trị là chuỗi "5"
+    let arr3 = new Array("5");
+    // muốn lấy ra phần tử vị trí 1 của mang arrStr2;
+    //  alert(arrStr2[1]);
+    // lấy ra phần tử cuối cùng của mảng
+    //  alert(arrStr2[arrStr2.length-1]);
+    // Cách duyệt mảng sử dụng for
+    let arrayCity = ["Hà Nôi", "Hồ Chí Minh", "Đà Nẵng","Huế","Tam Kỳ"];
+    // dungf hàm splice để xóa
+    //  arrayCity.splice(1,2)
+    // splice để chèn thêm pt vào vị trí bất kỳ
+    // arrayCity.splice(1,3,"Kon Tum");
+    // có thể duyệt xuôi từ 0-cuối
+    // for (let i = 0; i <= array.length - 1; i++) {
+    //     array[i] = "TP." + array[i]
+    //     console.log("PT thứ : " + i + "là " + array[i])
+    // }
+    // có thể duyệt ở bất kỳ vị trí nào ( vị trí 2)
+    // for (let i = 2; i <= array.length - 1; i++) {
+    //     array[i] = "TP." + array[i]
+    //     console.log("PT thứ : " + i + "là " + array[i])
+    // }
+    // có thể duyệt ở bất kỳ vị trí nào ( vị trí 2)
+    // for (let i = array.length-1; i>=0; i--) {
+    //     array[i] = "TP." + array[i]
+    //     console.log("PT thứ : " + i + "là " + array[i])
+    // }
+    // Cách duyệt mảng sử dụng for-of
+    // for(let city of arrayCity){
+    //     console.log(city);
+    // }
+    // for (let index in arrayCity){
+    //     console.log(index)
+    // }
+    // thêm phần tử "Kon Tum" vào cuối mảng arrayCity
+    // arrayCity[arrayCity.length]="Kon Tum"
+    // + sử dụng hàm
+    // let size= arrayCity.push("Pleiku");
+    //  alert(size);
+    //  console.log("Phần tử bị xóa là : " +arrayCity.pop() )
+    // thêm mới vào đầu mảng
+    // arrayCity.unshift("Quy Nhơn")
+    for(let city of arrayCity){
+        console.log(city);
+    }
+    console.log(arrayCity)
+    console.log(arrayCity.toString());
+    console.log(arrayCity.join("-"));
+    console.log(arrayCity.join());
+</script>
 </body>
 </html>
+C

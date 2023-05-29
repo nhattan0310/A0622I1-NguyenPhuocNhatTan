@@ -9,11 +9,14 @@
 </body>
 <script>
     sn();
-    let a = parseFloat(prompt('Nhap So Bat Ky'));
-    let b = parseFloat(prompt('Nhap So Bat Ky'));
-    function sn() {
-        
-    }
 
+    function sn() {
+        let arr = [];
+        for (let i = 0; i < 2; i++) {
+            arr[i] = prompt('Nhap So');
+        }
+        arr.reverse();
+        alert(arr);
+    }
 </script>
 </html>

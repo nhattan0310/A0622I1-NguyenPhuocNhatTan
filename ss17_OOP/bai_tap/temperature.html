@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Temperature{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        F(){
+            console.log((9*this.doC)/5+32);
+        }
+        K(){
+            console.log(this.doC+273.15);
+        }
+    }
+    let F1 =new Temperature(25);
+    F1.F();
+    let K1 =new Temperature(25);
+    K1.K();
+</script>
+</html>

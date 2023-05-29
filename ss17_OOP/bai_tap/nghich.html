@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="product" placeholder="Nhap Product">
+<input type="button" value="Add" onclick="addProduct()">
+<p id="result"></p>
+
+
+</body>
+<script>
+    class Product {
+        constructor(name) {
+            this.name = name;
+        }
+
+        getname() {
+            return this.name;
+        }
+
+        setname(name) {
+            this.name = name;
+        }
+    }
+
+    let productList = [];
+    display(productList);
+
+    function display(List) {
+      let tableString ='<table border="1">\n' +
+          '    <tr>\n' +
+          '        <th>Name</th>\n' +
+          '    </tr>'
+        for (let i = 0; i <List.length ; i++) {
+            tableString +='<tr>\n' +
+                '    <td>'+List[i].getname()+'</td>\n' +
+                '    <td><input type="button" value="Edit" onclick="editProduct('+ i +')"></td>\n' +
+                '    <td><input type="button" value="Delete" onclick="deleteProduct('+ i +')"></td>\n' +
+                '</tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+    function editProduct(index) {
+        let newName =prompt('Nhap Ten Product Moi');
+        productList[index].setname(newName);
+        display(productList);
+    }
+    function deleteProduct(index) {
+        if (confirm('Ban Co Muon Xoa San Pham ' + productList[index].getname())){
+            productList.splice(index,1);
+        }else {
+            alert('Ban Da Khong Xoa');
+        }
+        display(productList);
+    }
+    function addProduct() {
+        let name = document.getElementById("product").value;
+        let newProduct = new Product(name)
+        productList.push(newProduct);
+        display(productList);
+       // document.getElementById("product").value = "";
+    }
+
+</script>
+</html>

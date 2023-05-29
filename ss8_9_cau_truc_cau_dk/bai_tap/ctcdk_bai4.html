@@ -8,23 +8,21 @@
 <p>Nhap So Nguyen Thu Nhat <input type="number" id="a"></p>
 <p>Nhap So Nguyen Thu Hai <input type="number" id="b"></p>
 <p>Nhap So Nguyen Thu Ba <input type="number" id="c">
-<input type="submit" value="Kiem Tra" id="tinhtoan" onclick="function_bai4()"></p>
+    <input type="submit" value="Kiem Tra" id="tinhtoan" onclick="function_bai4()"></p>
 <p id="result"></p>
 </body>
 <script>
-   function function_bai4() {
-       let a = parseFloat(document.getElementById("a").value);
-       let b = parseFloat(document.getElementById("b").value);
-       let c = parseFloat(document.getElementById("c").value);
-       if(a >b && a > c){
-           document.getElementById("result").innerText= a +" La So Lon Nhat";
-       }else if(b > c){
-           document.getElementById("result").innerText= b +" La So Lon Nhat";
-       }else{
-           document.getElementById("result").innerText= c +" La So Lon Nhat";
-       }
-
-   }
-
+    function function_bai4() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        if (a > b && a > c) {
+            document.getElementById("result").innerText = a + " La So Lon Nhat";
+        } else if (b > c) {
+            document.getElementById("result").innerText = b + " La So Lon Nhat";
+        } else {
+            document.getElementById("result").innerText = c + " La So Lon Nhat";
+        }
+    }
 </script>
 </html>

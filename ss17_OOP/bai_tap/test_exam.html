@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="Nhap id">
+<input type="text" id="name" placeholder="Nhap Ten">
+<input type="date" id="birthday" >
+<input type="number" id="point" placeholder="Nhap Diem">
+<input type="button" value="Save" onclick="addNewStudent()">
+<p id="result"></p>
+</body>
+<script>
+class Student{
+    //hàm khởi tạo
+    constructor(id,name,birthday,point) {
+        this.id =  id;
+        this.name = name;
+        this.birthday = birthday;
+        this.point = point;
+    }
+    //getter && setter
+    getid(){
+        return this.id;
+    }
+    getname(){
+        return this.name;
+    }
+    getbirthday(){
+        return this.birthday;
+    }
+    getpoint(){
+        return this.point;
+    }
+    setname(name){
+        this.name = name;
+    }
+    setid(id){
+        this.id = id;
+    }
+    setbirthday(birthday){
+        this.birthday = birthday;
+    }
+    setpoint(point){
+        this.point = point;
+    }
+}
+    function addNewStudent() {
+
+    }
+
+</script>
+</html>

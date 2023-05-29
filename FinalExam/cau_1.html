@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let a=[],b=[];
+    let size =parseInt(prompt("nhap so phan tu ban muon"));
+    if (size<=50){
+        for (let i = 0; i < size; i++) {
+            let element =parseInt(prompt('Nhap Phan Tu'+(i+1)));
+            a.push(element);
+        }
+        for (let i = 0; i < size.length; i++) {
+            if (isPrime(a[i])){
+                b.push(a[i]);
+            }else {
+                alert('Nhap Sai So Phan Tu');
+            }
+        }
+        document.write(a+"<br>");
+        document.write(b);
+        function  isPrime(number) {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+    }
+    // array();
+    // function array() {
+    //     let arrA = [];
+    //     let list = parseInt(prompt('nhap so phan tu trong mang'));
+    //     for (let i = 0; i < list; i++) {
+    //         if (list <= 50) {
+    //             arrA[i] = prompt('nhap cac phan tu');
+    //         } else {
+    //             alert("Nhap Lai");
+    //             list = parseInt(prompt('nhap so phan tu trong mang'));
+    //             arrA[i] = prompt('nhap cac phan tu');
+    //         }
+    //     }
+    //     console
+    // }
+
+
+
+</script>
+</html>

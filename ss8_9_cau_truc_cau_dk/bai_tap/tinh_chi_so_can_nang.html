@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    <p>Nhap Chieu Cao<input type="number"  id="chieucao">
-        Nhap Can Nang<input type="number"  id="cannang">
+<p>Nhap Chieu Cao<input type="number"  id="chieucao"></p>
+        Nhap Can Nang<input type="number"  id="cannang"></p>
+        Nhap So Tuoi<input type="number"  id="tuoi">
       <input type="submit" value="Tinh BMI" id="tinhchiso" onclick="function_bai1()"><br>
              <p>BMI =<span id="bmi"></span></p>
             <p>Interpretation =<span id="int"></span></p>
@@ -15,7 +16,21 @@
     function function_bai1(){
         let chieucao=parseFloat(document.getElementById("chieucao").value);
         let cannang=parseFloat(document.getElementById("cannang").value);
-        let BMI= cannang/(chieucao**2);
+        let tuoi=parseFloat(document.getElementById("tuoi").value);
+        let chieucaoTB= chieucao/10;
+        let BMI= cannang/(chieucaoTB);
+        if (chieucao<=0){
+            alert("Phai Nhap Chieu Cao >0")
+        }
+        // if (cannang<=0){
+        //     alert("Phai Nhap Can Nang >0")
+        // }
+        if (tuoi>=80){
+            alert("Tuoi Qua Lon")
+        }
+        if (tuoi<20){
+            alert("Tuoi Qua Nho")
+        }
         BMI=BMI.toFixed(2);
         document.getElementById("bmi").innerHTML=BMI;
         let result;

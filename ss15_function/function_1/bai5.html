@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let sao = prompt('Nhap Ten');
+    timkiem();
+
+    function timkiem() {
+        let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega',
+            'Altair', 'Dubhe', 'Regulus'];
+        let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra',
+            'Aquila', 'Ursa Major', 'Leo'];
+        for (let i = 0; i <arr.length ; i++) {
+            if (arr[i] == sao){
+                alert (arr2[i]);
+                break;
+            }
+            alert("Toi Khong Hieu");
+        }
+    }
+
+</script>
 </html>
